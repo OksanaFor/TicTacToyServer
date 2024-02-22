@@ -22,5 +22,16 @@ namespace BLL.Services
                 throw new Exception(ErrorCode.ServerError00002);
             await Create(userDTO);
         }
-    }
+        public async Task<bool> Authorization(UserDTO userDTO)
+        {
+            var user = GetAll().FirstOrDefault(u => u.Login == userDTO.Login);
+
+            if (user !== null || user.Password != userDTO.Password)
+            {
+                return true
+
+
+            }
+            else throw new Exception(ErrorCode.ServerError00003);
+        }
 }
