@@ -1,4 +1,4 @@
-﻿namespace Migration.MSSql
+﻿namespace Migrations.MSSql
 {
     internal class Program
     {

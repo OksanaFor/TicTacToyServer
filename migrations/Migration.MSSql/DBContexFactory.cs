@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
 
-namespace Migration.MSSql
+namespace Migrations.MSSql
 {
     public class DbContextFactory : IDesignTimeDbContextFactory<TicTacToyEntities>
     {
@@ -12,7 +12,7 @@ namespace Migration.MSSql
             var contextBuilder = new DbContextOptionsBuilder<TicTacToyEntities>();
             contextBuilder.UseSqlServer("Server=fake;Database=db;User=root;Password=root;", config =>
             {
-                config.MigrationsAssembly("Migration.MSSql");
+                config.MigrationsAssembly("Migrations.MSSql");
             });
             return new TicTacToyEntities(contextBuilder.Options);
         }

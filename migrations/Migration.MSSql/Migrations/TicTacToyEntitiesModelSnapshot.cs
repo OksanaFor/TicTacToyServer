@@ -3,19 +3,16 @@ using DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Migration.MSSql.Migrations
+namespace Migrations.MSSql.Migrations
 {
     [DbContext(typeof(TicTacToyEntities))]
-    [Migration("20240220001756_RemovePveDrawColumn")]
-    partial class RemovePveDrawColumn
+    partial class TicTacToyEntitiesModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
