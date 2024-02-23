@@ -8,5 +8,7 @@ namespace DAL.Models
         public string Password { get; set; }
         public string Email { get; set; }
 
+        public UserStatistics UserStatistics { get; set; }  
+
     }
 }

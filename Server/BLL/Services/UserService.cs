@@ -5,6 +5,7 @@ using BLL.Services.Base;
 using DAL.Base.Interfaces;
 using DAL.Models;
 using DTO;
+using DTO.Request;
 
 namespace BLL.Services
 {
@@ -12,26 +13,26 @@ namespace BLL.Services
     {
         public UserService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {
-            
+
         }
         public async Task Registration(UserDTO userDTO)
         {
-          if (GetAll().Any(s => s.Login == userDTO.Login))  
+            if (GetAll().Any(s => s.Login == userDTO.Login))
                 throw new Exception(ErrorCode.ServerError00001);
-          if (userDTO.Login.Length>10)
+            if (userDTO.Login.Length > 10)
                 throw new Exception(ErrorCode.ServerError00002);
             await Create(userDTO);
         }
-        public async Task<bool> Authorization(UserDTO userDTO)
+        public bool Authorization(AuthorizationDto request)
         {
-            var user = GetAll().FirstOrDefault(u => u.Login == userDTO.Login);
+            var user = GetAll().FirstOrDefault(u => u.Login == request.Login);
 
-            if (user !== null || user.Password != userDTO.Password)
+            if (user?.Password != request.Password)
             {
-                return true
-
-
+                throw new Exception(ErrorCode.ServerError00003);
+              
             }
-            else throw new Exception(ErrorCode.ServerError00003);
+            return true;
         }
+    }
 }

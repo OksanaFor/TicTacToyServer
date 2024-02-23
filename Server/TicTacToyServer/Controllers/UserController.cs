@@ -1,7 +1,9 @@
 ﻿using BLL.Interfases;
 using DAL.Models;
 using DTO;
+using DTO.Request;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 using TicTacToyServer.Controllers.Base;
 
 namespace TicTacToyServer.Controllers
@@ -19,6 +21,14 @@ namespace TicTacToyServer.Controllers
         public async Task Registration(UserDTO user)
         {
             await _userService.Registration(user);
+        }
+
+        [HttpPost]
+        [Route("[action]")]
+        public bool Authorization(AuthorizationDto request )
+        {
+            return _userService.Authorization(request);
+           
         }
     }
 }

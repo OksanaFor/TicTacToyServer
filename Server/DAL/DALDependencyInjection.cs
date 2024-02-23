@@ -12,6 +12,7 @@ namespace DAL
         {
             services.AddScoped<ITicTacToyEntities, TicTacToyEntities > ();
             services.AddTransient<BaseRepository<User, int>>();
+            services.AddTransient<BaseRepository <UserStatistics,int>>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
     }

@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
 using DAL.Models;
 using DTO;
-using System.Reflection.Metadata;
+using DTO.Request;
+
 
 
 namespace BLL
@@ -12,6 +13,15 @@ namespace BLL
         {
             CreateMap<User, UserDTO>();
             CreateMap<UserDTO, User>();
+            CreateMap<UserStatistics, UserStatisticDto>().AfterMap((model, dto) =>
+            {
+                dto.Rating = model.Win * 2 + model.Drow - model.Lose * 3;
+                dto.User = null;
+            });
+            CreateMap<UserStatisticDto, UserStatistics>().AfterMap((dto, model) =>
+            {
+                dto.User = null;
+            });
         }
     }
 }

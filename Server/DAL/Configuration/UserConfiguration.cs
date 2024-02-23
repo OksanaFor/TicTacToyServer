@@ -14,6 +14,8 @@ namespace DAL.Configuration
             builder.Property(s =>s.Email).IsRequired().HasMaxLength(128);
             builder.Property(s => s.Login).IsRequired().HasMaxLength(128);
             builder.Property(s => s.Password).IsRequired().HasMaxLength(128);
+            builder.Navigation(s => s.UserStatistics).AutoInclude();
         }
+        
     }
 }

@@ -2,6 +2,7 @@
 
 using BLL.Interfases.Base;
 using DTO;
+using DTO.Request;
 
 namespace BLL.Interfases
 {
@@ -9,7 +10,7 @@ namespace BLL.Interfases
     {
         Task Registration(UserDTO userDTO);
 
-        Task<bool> Authorization (UserDTO userDTO);
+        bool Authorization (AuthorizationDto request);
 
     }
 }

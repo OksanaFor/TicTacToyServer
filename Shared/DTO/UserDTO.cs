@@ -1,5 +1,7 @@
 ﻿
 
+using DTO.Request;
+
 namespace DTO
 {
     public class UserDTO
@@ -8,5 +10,8 @@ namespace DTO
         public string Login { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
+      
+
+        public UserStatisticDto UserStatistic { get; set; }
     }
 }
