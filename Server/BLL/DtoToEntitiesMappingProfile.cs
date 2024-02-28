@@ -22,6 +22,9 @@ namespace BLL
             {
                 dto.User = null;
             });
+
+            CreateMap<Room, RoomDto>();
+
         }
     }
 }
