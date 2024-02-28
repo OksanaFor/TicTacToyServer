@@ -11,8 +11,8 @@ namespace BLL
     {
         public DtoToEntitiesMappingProfile()
         {
-            CreateMap<User, UserDTO>();
-            CreateMap<UserDTO, User>();
+            CreateMap<User, UserDto>();
+            CreateMap<UserDto, User>();
             CreateMap<UserStatistics, UserStatisticDto>().AfterMap((model, dto) =>
             {
                 dto.Rating = model.Win * 2 + model.Drow - model.Lose * 3;

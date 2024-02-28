@@ -9,13 +9,13 @@ using DTO.Request;
 
 namespace BLL.Services
 {
-    public class UserService : BaseService<UserDTO, User, int>, IUserService
+    public class UserService : BaseService<UserDto, User, int>, IUserService
     {
         public UserService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {
 
         }
-        public async Task Registration(UserDTO userDTO)
+        public async Task Registration(UserDto userDTO)
         {
             if (GetAll().Any(s => s.Login == userDTO.Login))
                 throw new Exception(ErrorCode.ServerError00001);

@@ -15,6 +15,11 @@ namespace DAL.Configuration
             builder.Property(s => s.Login).IsRequired().HasMaxLength(128);
             builder.Property(s => s.Password).IsRequired().HasMaxLength(128);
             builder.Navigation(s => s.UserStatistics).AutoInclude();
+            builder.HasOne(s => s.Room)
+                .WithMany(s => s.Users)
+                .HasForeignKey(s => s.RoomId)
+                .IsRequired(false)
+                .OnDelete(DeleteBehavior.ClientSetNull);
         }
         
     }

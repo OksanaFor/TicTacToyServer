@@ -4,7 +4,7 @@ using DTO.Request;
 
 namespace DTO
 {
-    public class UserDTO
+    public class UserDto
     {
         public int Id { get; set; }
         public string Login { get; set; }
@@ -13,5 +13,8 @@ namespace DTO
       
 
         public UserStatisticDto UserStatistic { get; set; }
+
+        public RoomDto Room { get; set; }
+        public int? RoomId { get; set; }
     }
 }

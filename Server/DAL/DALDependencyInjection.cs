@@ -14,6 +14,7 @@ namespace DAL
             services.AddTransient<BaseRepository<User, int>>();
             services.AddTransient<BaseRepository <UserStatistics,int>>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<BaseRepository<Room, int>>();
         }
     }
 }

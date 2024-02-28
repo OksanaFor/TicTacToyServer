@@ -9,7 +9,7 @@ using TicTacToyServer.Controllers.Base;
 namespace TicTacToyServer.Controllers
 {
 
-    public class UserController : BaseController<UserDTO, User, int>
+    public class UserController : BaseController<UserDto, User, int>
     {
         private readonly IUserService _userService;
         public UserController(IUserService userService) : base(userService)
@@ -18,7 +18,7 @@ namespace TicTacToyServer.Controllers
         }
         [HttpPost] 
         [Route("[action]")]
-        public async Task Registration(UserDTO user)
+        public async Task Registration(UserDto user)
         {
             await _userService.Registration(user);
         }

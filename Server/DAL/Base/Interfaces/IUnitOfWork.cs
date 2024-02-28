@@ -8,6 +8,8 @@ namespace DAL.Base.Interfaces
         BaseRepository<User, int> Users { get; }
         BaseRepository<UserStatistics, int> Statistics { get; }
 
+        BaseRepository<Room, int> Rooms { get; }    
+
         Task SaveAsync();
 
 

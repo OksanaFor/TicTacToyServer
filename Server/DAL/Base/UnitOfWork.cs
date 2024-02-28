@@ -12,6 +12,7 @@ namespace DAL.Base
         private readonly TicTacToyEntities _dbContext;
         private BaseRepository<User, int> _userRepository;
         private BaseRepository<UserStatistics, int> _userStatisticsRepository;
+        private BaseRepository<Room, int> _roomRepository;
 
 
         public UnitOfWork(DbContextOptions optionsBuilder)
@@ -27,7 +28,7 @@ namespace DAL.Base
                 return _userRepository;
             }
         }
-        public BaseRepository<UserStatistics, int> UsersStatisic 
+        public BaseRepository<UserStatistics, int> Statistics
         {
             get
             {
@@ -37,6 +38,17 @@ namespace DAL.Base
             }
         }
 
+        
+
+        public BaseRepository<Room, int> Rooms
+        {
+            get
+            {
+                if (_roomRepository == null)
+                    _roomRepository = new BaseRepository<Room, int>(_dbContext);
+                return _roomRepository;
+            }
+        }
 
         private bool disposed = false;
 

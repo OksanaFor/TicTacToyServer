@@ -14,7 +14,7 @@ namespace DTO.Request
         public int Drow { get; set; }
         public int Rating { get; set; }
 
-        public UserDTO User { get; set; }
+        public UserDto User { get; set; }
         public int UserId { get; set; }
     }
 }

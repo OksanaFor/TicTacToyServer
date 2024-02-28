@@ -6,9 +6,9 @@ using DTO.Request;
 
 namespace BLL.Interfases
 {
-    public interface IUserService: IBaseService<UserDTO,int>
+    public interface IUserService: IBaseService<UserDto,int>
     {
-        Task Registration(UserDTO userDTO);
+        Task Registration(UserDto userDto);
 
         bool Authorization (AuthorizationDto request);
 
