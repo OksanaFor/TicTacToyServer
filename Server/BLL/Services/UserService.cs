@@ -15,6 +15,11 @@ namespace BLL.Services
         {
 
         }
+        public override Task Create(UserDto dto)
+        {
+            dto.UserStatistic = new UserStatisticDto();
+            return base.Create(dto);
+        }
         public async Task Registration(UserDto userDTO)
         {
             if (GetAll().Any(s => s.Login == userDTO.Login))

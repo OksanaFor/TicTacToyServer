@@ -8,9 +8,9 @@ namespace DAL.Models
         public string Password { get; set; }
         public string Email { get; set; }
 
-        public UserStatistics UserStatistics { get; set; }  
+        public UserStatistics? UserStatistics { get; set; }  
         
-        public Room Room { get; set; }
+        public Room? Room { get; set; }
         public int? RoomId { get; set; }
 
     }

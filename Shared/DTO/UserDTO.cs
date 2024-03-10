@@ -12,9 +12,9 @@ namespace DTO
         public string Email { get; set; }
       
 
-        public UserStatisticDto UserStatistic { get; set; }
+        public UserStatisticDto? UserStatistic { get; set; }
 
-        public RoomDto Room { get; set; }
+        public RoomDto? Room { get; set; }
         public int? RoomId { get; set; }
     }
 }
