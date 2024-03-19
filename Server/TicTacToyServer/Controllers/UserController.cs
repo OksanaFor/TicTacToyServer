@@ -18,16 +18,16 @@ namespace TicTacToyServer.Controllers
         }
         [HttpPost] 
         [Route("[action]")]
-        public async Task Registration(UserDto user)
+        public async Task<Tuple<string, UserDto>> Registration(UserDto user)
         {
-            await _userService.Registration(user);
+            return await _userService.Registration(user);
         }
 
         [HttpPost]
         [Route("[action]")]
-        public bool Authorization(AuthorizationDto request )
+        public async Task<Tuple<string, UserDto>>  Authorization(AuthorizationDto request )
         {
-            return _userService.Authorization(request);
+            return await _userService.Authorization(request);
            
         }
     }

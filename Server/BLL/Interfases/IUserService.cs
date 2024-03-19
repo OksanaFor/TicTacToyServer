@@ -8,9 +8,9 @@ namespace BLL.Interfases
 {
     public interface IUserService: IBaseService<UserDto,int>
     {
-        Task Registration(UserDto userDto);
+        Task<Tuple<string, UserDto>> Registration(UserDto userDto);
 
-        bool Authorization (AuthorizationDto request);
+        Task<Tuple<string, UserDto>> Authorization (AuthorizationDto request);
 
     }
 }

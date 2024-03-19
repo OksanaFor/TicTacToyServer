@@ -25,10 +25,14 @@ namespace BLL
 
             CreateMap<Room, RoomDto>().AfterMap((model, dto) =>
             {
-                foreach (var user in dto.Users)
+                if(dto.Users != null)
                 {
-                    user.Room = null;
+                    foreach (var user in dto.Users)
+                    {
+                        user.Room = null;
+                    }
                 }
+               
 
             });
             CreateMap<RoomDto, Room>().AfterMap((dto, model) =>

@@ -13,5 +13,9 @@ namespace BLL.Services
         public RoomService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {
         }
+        public Task<bool> EnterRoom(string password)
+        {
+
+        }
     }
 }
