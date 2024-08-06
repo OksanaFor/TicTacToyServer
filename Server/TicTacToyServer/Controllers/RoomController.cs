@@ -1,6 +1,7 @@
 ﻿using BLL.Interfases;
 using DAL.Models;
 using DTO;
+using DTO.Request;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TicTacToyServer.Controllers.Base;
@@ -18,10 +19,10 @@ namespace TicTacToyServer.Controllers
         }
         [HttpPost]
         [Route("[action]")]
-        public async Task<bool> EnterRoom([FromBody]string password)
+        public async Task<bool> EnterRoom(EnterRoomDto request)
         {
 
-            return await roomService.EnterRoom(password);
+            return await roomService.EnterRoom(request);
         }
     }
 }

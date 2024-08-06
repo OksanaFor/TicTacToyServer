@@ -11,5 +11,6 @@ namespace BLL.Interfases.Base
         Task<TDto> GetById(GetByIdRequestDto<TKey> request);
         Task Update(TDto dtoToUpdate);
         Task DeleteAsync(TKey id);
+       
     }
 }
