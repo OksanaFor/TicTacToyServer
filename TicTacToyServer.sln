@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "Server\DAL\DAL.cspro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "migrations", "migrations", "{DF864BE8-A81E-47C9-AF73-379368EF474F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migrations.MSSql", "migrations\Migration.MSSql\Migrations.MSSql.csproj", "{81DC634A-A8D7-468F-AFCA-626AB8310A65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Migrations.MSSql", "migrations\Migration.MSSql\Migrations.MSSql.csproj", "{81DC634A-A8D7-468F-AFCA-626AB8310A65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{D2870F48-AC1A-45AB-A495-9EC5AC1EBBCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{81DC634A-A8D7-468F-AFCA-626AB8310A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81DC634A-A8D7-468F-AFCA-626AB8310A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81DC634A-A8D7-468F-AFCA-626AB8310A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2870F48-AC1A-45AB-A495-9EC5AC1EBBCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2870F48-AC1A-45AB-A495-9EC5AC1EBBCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2870F48-AC1A-45AB-A495-9EC5AC1EBBCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2870F48-AC1A-45AB-A495-9EC5AC1EBBCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

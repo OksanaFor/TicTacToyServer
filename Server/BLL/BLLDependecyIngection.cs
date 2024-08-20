@@ -9,8 +9,8 @@ namespace BLL
     {
         public static void AddServiceModule(this IServiceCollection services)
         {
-            services.AddTransient<IUserService, UserService>();
-            services.AddTransient<IRoomService, RoomService>();
+            //services.AddTransient<IUserService, UserService>();
+           // services.AddTransient<IRoomService, RoomService>();
   
         }
     }
